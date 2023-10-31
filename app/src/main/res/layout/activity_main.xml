@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:elevation="3dp"
+        android:src="@drawable/arrow_left"
+        android:layout_marginTop="66dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/user"
+        android:elevation="3dp"
+        android:src="@drawable/user_icon"
+        android:layout_marginTop="66dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/container_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/bicycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/bicycle_icon">
+        </ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bg_card"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginTop="420dp"
+            app:cardCornerRadius="50dp"
+            android:scaleY="1.2"
+            app:cardBackgroundColor="@color/blue">
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text1"
+            android:text="Bicycle"
+            android:textSize="42sp"
+            android:layout_marginTop="550dp"
+            android:elevation="10dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="150dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/plus_minus_card"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="136dp"
+            android:layout_marginTop="630dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/white">
+
+            <ImageView
+                android:id="@+id/plus_icon"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/icon_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/count_number"
+                android:text="1"
+                android:textSize="22sp"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/minus_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="22dp"
+                android:src="@drawable/icon_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
