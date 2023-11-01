@@ -1,113 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="66dp"
         android:elevation="3dp"
         android:src="@drawable/arrow_left"
-        android:layout_marginTop="66dp"
-        android:layout_marginLeft="16dp"
-        android:layout_width="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/user"
-        android:elevation="3dp"
-        android:src="@drawable/user_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:layout_marginTop="66dp"
         android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        android:src="@drawable/user_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/bicycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:elevation="10dp"
+        android:src="@drawable/bicycle_icon"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/bicycle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:elevation="10dp"
-            android:layout_marginBottom="50dp"
-            android:src="@drawable/bicycle_icon">
-        </ImageView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/bg_card"
-            android:layout_width="match_parent"
-            android:layout_height="480dp"
-            android:layout_marginTop="420dp"
-            app:cardCornerRadius="50dp"
-            android:scaleY="1.2"
-            app:cardBackgroundColor="@color/blue">
-        </androidx.cardview.widget.CardView>
+        android:background="@drawable/rounder"
+        android:layout_height="500dp"
+        android:layout_gravity="bottom">
 
         <TextView
-            android:id="@+id/text1"
-            android:text="Bicycle"
-            android:textSize="42sp"
-            android:layout_marginTop="550dp"
-            android:elevation="10dp"
-            android:textColor="@color/white"
-            android:layout_marginLeft="150dp"
-            android:textStyle="bold"
+            android:id="@+id/text_bicycle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </TextView>
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:text="@string/bicycle"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/plus_minus_card"
+            android:layout_marginBottom="20dp"
+            />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/plus_minus_card"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="136dp"
-            android:layout_marginTop="630dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/white">
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="50dp"
+            app:cardCornerRadius="10dp"/>
 
             <ImageView
-                android:id="@+id/plus_icon"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/icon_1"
+                android:elevation="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </ImageView>
+                android:layout_height="wrap_content"
+                android:id="@+id/plus_icon"
+                app:layout_constraintEnd_toEndOf="@id/plus_minus_card"
+                app:layout_constraintBottom_toBottomOf="@id/plus_minus_card"
+                app:layout_constraintTop_toTopOf="@id/plus_minus_card"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_1"/>
 
             <TextView
                 android:id="@+id/count_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/plus_minus_card"
+                app:layout_constraintRight_toRightOf="@id/plus_minus_card"
+                app:layout_constraintTop_toTopOf="@id/plus_minus_card"
+                app:layout_constraintBottom_toBottomOf="@id/plus_minus_card"
+                android:elevation="10dp"
                 android:text="1"
                 android:textSize="22sp"
-                android:layout_marginLeft="76dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </TextView>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/minus_icon"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="22dp"
-                android:src="@drawable/icon_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </ImageView>
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="@id/plus_minus_card"
+                app:layout_constraintBottom_toBottomOf="@id/plus_minus_card"
+                app:layout_constraintTop_toTopOf="@id/plus_minus_card"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_2"/>
 
-        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </FrameLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
